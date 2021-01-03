@@ -1,4 +1,5 @@
 const baseNumberSystem = (start, end, base) => {
+    if (base < 2) return [];
     const arrayOfExponentialNumbers = [];
     for (let exponent = start; exponent <= end; exponent++) {
         arrayOfExponentialNumbers.push((base ** exponent).toLocaleString('en'));

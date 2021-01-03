@@ -1,4 +1,5 @@
 def baseNumberSystem(start, end, base):
+    if base < 2: return []
     list_of_exponential_numbers = [
         f"{base ** exponent:,}" for exponent in range(start, end + 1)
     ]
