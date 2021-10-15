@@ -16,5 +16,5 @@ function_arguments = {
     "base_5": {"start": 0, "end": 12, "base": 5},
 }
 
-for key in function_arguments.keys():
-    print(baseNumberSystem(**function_arguments[key]))
+for key, value in function_arguments.items():
+    print(baseNumberSystem(**value))
