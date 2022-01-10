@@ -1,5 +1,5 @@
 const baseNumberSystem = (start, end, base) => {
-  if (base < 2 && start < 0) {
+  if (base < 2 || start < 0) {
     return [];
   }
   const arrayOfExponentialNumbers = [];
