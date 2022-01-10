@@ -1,11 +1,13 @@
 const baseNumberSystem = (start, end, base) => {
-    if (base < 2) return [];
-    const arrayOfExponentialNumbers = [];
-    for (let exponent = start; exponent <= end; exponent++) {
-        arrayOfExponentialNumbers.push((base ** exponent).toLocaleString('en'));
-    }
-    arrayOfExponentialNumbers.unshift(`base ${base}:`);    
-    return arrayOfExponentialNumbers;
+  if (base < 2 && start < 0) {
+    return [];
+  }
+  const arrayOfExponentialNumbers = [];
+  for (let exponent = start; exponent <= end; exponent++) {
+    arrayOfExponentialNumbers.push((base ** exponent).toLocaleString("en"));
+  }
+  arrayOfExponentialNumbers.unshift(`base ${base}:`);
+  return arrayOfExponentialNumbers;
 };
 
 console.log();
