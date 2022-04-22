@@ -1,4 +1,6 @@
-def baseNumberSystem(start, end, base):
+def baseNumberSystem(start: int, end: int, base: int) -> list[str]:
+    """Returns a list of exponential numbers"""
+    
     if base < 2 or start < 0:
         return []
     list_of_exponential_numbers = [
