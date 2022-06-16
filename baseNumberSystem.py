@@ -1,10 +1,13 @@
-def baseNumberSystem(start: int, end: int, base: int) -> list[str]:
+import pprint
+
+
+def base_number_system(start: int, end: int, base: int) -> list[str]:
     """Returns a list of exponential numbers"""
-    
+
     if base < 2 or start < 0:
         return []
     list_of_exponential_numbers = [
-        f"{base ** exponent:,}" for exponent in range(start, end + 1)
+        base**exponent for exponent in range(start, end + 1)
     ]
     list_of_exponential_numbers.insert(0, f"base {base}:")
     return list_of_exponential_numbers
@@ -13,16 +16,16 @@ def baseNumberSystem(start: int, end: int, base: int) -> list[str]:
 print()
 
 
-def main():
-    function_arguments = {
-        "base_2": {"start": 0, "end": 12, "base": 2},
-        "base_3": {"start": 0, "end": 12, "base": 3},
-        "base_4": {"start": 0, "end": 12, "base": 4},
-        "base_5": {"start": 0, "end": 12, "base": 5},
-    }
+def main() -> None:
+    """Main function"""
 
-    for value in function_arguments.values():
-        print(baseNumberSystem(**value))
+    pp = pprint.PrettyPrinter(underscore_numbers=True, width=200)
+
+    pp.pprint(base_number_system(start=0, end=12, base=2))
+    pp.pprint(base_number_system(start=0, end=12, base=3))
+    pp.pprint(base_number_system(start=0, end=12, base=4))
+    pp.pprint(base_number_system(start=0, end=12, base=5))
+    pp.pprint(base_number_system(start=0, end=12, base=6))
 
 
 if __name__ == "__main__":
