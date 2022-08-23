@@ -9,17 +9,26 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class ConstantNamespace:
+    """Class to hold constant names"""
+
     START = 0
 
 
 constant = ConstantNamespace()
 
 
+class WrongBaseAndLowStartError(Exception):
+    """Custom Error Class"""
+
+    def __str__(self):
+        return "Base must start with 2 and constant.START must be 0 and above."
+
+
 def base_number_system(end: int, base: int) -> list[str]:
     """Returns a list of exponential numbers"""
 
     if base < 2 or constant.START < 0:
-        return []
+        raise WrongBaseAndLowStartError()
     list_of_exponential_numbers = [
         base**exponent for exponent in range(constant.START, end + 1)
     ]
@@ -30,7 +39,7 @@ def base_number_system(end: int, base: int) -> list[str]:
 print()
 
 
-def main() -> None:
+def execute_main() -> None:
     """Main function"""
 
     pp = pprint.PrettyPrinter(underscore_numbers=True, width=200)
@@ -43,4 +52,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    execute_main()
