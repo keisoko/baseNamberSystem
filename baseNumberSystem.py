@@ -42,13 +42,13 @@ print()
 def execute_main() -> None:
     """Main function"""
 
-    pp = pprint.PrettyPrinter(underscore_numbers=True, width=200)
+    custom_printer = pprint.PrettyPrinter(underscore_numbers=True, width=200)
 
-    pp.pprint(base_number_system(end=12, base=2))
-    pp.pprint(base_number_system(end=12, base=3))
-    pp.pprint(base_number_system(end=12, base=4))
-    pp.pprint(base_number_system(end=12, base=5))
-    pp.pprint(base_number_system(end=12, base=6))
+    custom_printer.pprint(base_number_system(end=12, base=2))
+    custom_printer.pprint(base_number_system(end=12, base=3))
+    custom_printer.pprint(base_number_system(end=12, base=4))
+    custom_printer.pprint(base_number_system(end=12, base=5))
+    custom_printer.pprint(base_number_system(end=12, base=6))
 
 
 if __name__ == "__main__":
