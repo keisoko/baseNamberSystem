@@ -1,6 +1,7 @@
 """
 Outputs a list containing the a series of exponential numbers 
 based on the  exponent range e.g. 2⁰ = 1, 2¹ = 2, 2² = 4, etc.
+for different base integers 
 """
 
 import pprint
