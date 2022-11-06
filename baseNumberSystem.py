@@ -6,7 +6,6 @@ for different base integers
 
 import pprint
 from dataclasses import dataclass
-from functools import lru_cache
 
 
 @dataclass(frozen=True)
@@ -26,7 +25,6 @@ class WrongBaseAndLowStartError(Exception):
         return "Base must start with 2 and constant.START must be 0 and above."
 
 
-@lru_cache(maxsize=5)
 def base_number_system(end: int, base: int) -> list[str]:
     """Returns a list of exponential numbers"""
 
