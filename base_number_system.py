@@ -43,6 +43,7 @@ print()
 
 
 def execute_main() -> None:
+    """Main function"""
 
     custom_printer = pprint.PrettyPrinter(underscore_numbers=True, width=200)
 
